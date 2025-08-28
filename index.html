@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Chatbot QR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f2f2f2;
+    }
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scan to Chat with Our Bot</h1>
+  <canvas id="qr" width="250" height="250"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+  <script>
+    const phoneNumber = "15551359164"; 
+    const defaultMessage = " P1 ";
+    const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
+
+    new QRious({
+      element: document.getElementById("qr"),
+      value: waLink,
+      size: 250
+    });
+  </script>
+</body>
+</html>

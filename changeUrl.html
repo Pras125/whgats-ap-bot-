@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Redirect</title>
+</head>
+<body>
+  <button id="openWA">Open WhatsApp</button>
+
+  <script>
+    const phoneNumber = "1 555 135 9164"; 
+    const defaultMessage = " P1 ";
+    const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(defaultMessage)}`;
+
+    document.getElementById("openWA").addEventListener("click", () => {
+      window.location.href = waLink;
+    });
+  </script>
+</body>
+</html>
